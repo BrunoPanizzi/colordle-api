@@ -1,11 +1,12 @@
 from random import seed, sample
 from datetime import datetime
 from flask import Flask
+from flask_cors import CORS
 
 from helpers.date_from_ISO import date_from_ISO
 
 app = Flask(__name__)
-
+CORS(app)
 
 @app.route('/daily')
 def daily():
